@@ -124,6 +124,7 @@ public abstract class NonCategoryChannelImpl extends ChannelImpl implements NonC
      * @param replyMsgId  用户 5 分钟内发送的消息 ID（可选，用于降低 API 额度消耗）
      * @return 发送的消息 ID
      */
+    @Override
     public String sendComponent(BaseComponent component, @Nullable ChannelMessage quote,
                                @Nullable User tempTarget, @Nullable String replyMsgId) {
         Object[] result = MessageBuilder.serialize(component);
