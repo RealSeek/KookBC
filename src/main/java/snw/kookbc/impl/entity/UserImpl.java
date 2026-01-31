@@ -200,6 +200,7 @@ public class UserImpl implements User, Updatable, LazyLoadable {
      * @param replyMsgId  用户 5 分钟内发送的消息 ID（可选，用于降低 API 额度消耗）
      * @return 发送的消息 ID
      */
+    @Override
     public String sendPrivateMessage(BaseComponent component, PrivateMessage quote, @Nullable String replyMsgId) {
         Object[] serialize = MessageBuilder.serialize(component);
         int type = (int) serialize[0];
