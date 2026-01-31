@@ -146,6 +146,7 @@ public abstract class MessageImpl implements Message, LazyLoadable {
      * @param component   新的消息组件
      * @param replyMsgId  用户 5 分钟内发送的消息 ID（可选，用于降低 API 额度消耗）
      */
+    @Override
     public void setComponent(BaseComponent component, @Nullable String replyMsgId) {
         checkCompatibleComponentType(component);
         Object content = MessageBuilder.serialize(component)[1];
