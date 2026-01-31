@@ -99,6 +99,7 @@ public class ChannelMessageImpl extends MessageImpl implements ChannelMessage {
      * @param component   新的消息组件
      * @param replyMsgId  用户 5 分钟内发送的消息 ID（可选，用于降低 API 额度消耗）
      */
+    @Override
     public void setComponentTemp(User user, BaseComponent component, @Nullable String replyMsgId) {
         checkCompatibleComponentType(component);
         Object content = MessageBuilder.serialize(component)[1];
